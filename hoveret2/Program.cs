@@ -31,23 +31,35 @@ namespace hoveret2
         }
         static void Targil3a()
         {
-            int avg;
-            Console.WriteLine("what is the avg number");
-            avg = int.Parse(Console.ReadLine());
-            if ( avg == 100)
+            double avg = 0;
+            double markTest;
+            for (int i=0;i<3;i++)
+            {
+                Console.WriteLine(" Your test mark is:");
+                markTest = double.Parse(Console.ReadLine());
+                if (markTest < 60)
+                {
+                    markTest = markTest * 1.1;
+                }
+
+                avg =+ markTest;     
+            }
+            avg = avg / 3; 
+            if (avg.Equals(100))
             {
                 Console.WriteLine(" Nice Job ya dork");
                 Console.ReadLine();
             }
-             else
-
-
+            else
+            Console.WriteLine(" too bad stupid");
+            Console.ReadLine();
 
         }
 
         static void Main(string[] args)
         {
-                Program.Targil2();
+            //Program.Targil2();
+            Program.Targil3a();
         }
     }
 }
