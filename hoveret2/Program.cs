@@ -110,13 +110,13 @@ namespace hoveret2
         }
         static void Targil8()
         {
-            int students = 0 , bus, places;
+            int students = 0, bus, places;
             //Console.WriteLine("How much students are going in class ?");
             //students = int.Parse(Console.ReadLine());
             for (int i = 0; i < 4; i++)
             {
                 Console.WriteLine(" The ammount of students in the class is:");
-                students =+ int.Parse(Console.ReadLine());
+                students = +int.Parse(Console.ReadLine());
             }
             Console.WriteLine("How much places are there in each bus? ");
             places = int.Parse(Console.ReadLine());
@@ -131,6 +131,21 @@ namespace hoveret2
             }
             Console.ReadLine();
         }
+        static void Targil10()
+        {
+            int sumScores = 0, TestScore;
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Enter the Test score");
+                TestScore = int.Parse(Console.ReadLine());
+                if (TestScore > 80)
+                {
+                    sumScores++;
+                }
+            }
+            Console.WriteLine("the number of test that are higher then 80 is {0}", sumScores);
+            Console.ReadLine();
+        }
 
         static void Main(string[] args)
         {
@@ -138,7 +153,8 @@ namespace hoveret2
             //rogram.Targill3a();
             //Program.Targil6();
             //Program.Targil7();
-            Program.Targil8();
+            //Program.Targil8();
+            Program.Targil10();
         }
     }
 }
