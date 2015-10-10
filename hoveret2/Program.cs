@@ -79,20 +79,20 @@ namespace hoveret2
         }
         static void Targil7()
         {
-            List<int> palindrom = new List<int>() ;
+            List<int> palindrom = new List<int>();
             int number;
             bool truth_flag = true;
             Console.WriteLine("Show me what you got");
             number = int.Parse(Console.ReadLine());
-            while(number>0)
+            while (number > 0)
             {
                 palindrom.Add(number % 10);
                 number = (number - (number % 10)) / 10;
             }
             int list_length = palindrom.Count;
-            for (int i=0; i< list_length; i++)
+            for (int i = 0; i < list_length; i++)
             {
-                if (!palindrom[i].Equals(palindrom[(list_length -1) -i ]))
+                if (!palindrom[i].Equals(palindrom[(list_length - 1) - i]))
                 {
                     truth_flag = false;
                 }
@@ -108,13 +108,37 @@ namespace hoveret2
             }
             Console.ReadLine();
         }
+        static void Targil8()
+        {
+            int students = 0 , bus, places;
+            //Console.WriteLine("How much students are going in class ?");
+            //students = int.Parse(Console.ReadLine());
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(" The ammount of students in the class is:");
+                students =+ int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("How much places are there in each bus? ");
+            places = int.Parse(Console.ReadLine());
+            bus = students / places;
+            if (students > places)
+            {
+                Console.WriteLine("you need to order {0} bus", bus);
+            }
+            else
+            {
+                Console.WriteLine(" we have enough buses, USE 1 and GO GO GO!");
+            }
+            Console.ReadLine();
+        }
 
         static void Main(string[] args)
         {
             //Program.Targil2();
             //rogram.Targill3a();
             //Program.Targil6();
-            Program.Targil7();
+            //Program.Targil7();
+            Program.Targil8();
         }
     }
 }
